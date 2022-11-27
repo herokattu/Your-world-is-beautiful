@@ -1,0 +1,20 @@
+<script type="module">
+import {bg, show} from "https://js.sabae.cc/egadv.js";
+await bg();
+
+for (;;){
+  if(await show("この写真を選びますか?",["はい","いいえ"])=="はい"){
+  break;
+}
+  await show("もう一度聞きます!!");
+}
+
+const a =await show("さあ、問題です!ここはどこでしょうか?",["あなたが知っている世界","あたなの知らない世界","どちらでもない"]);
+if (a=="あなたが知っている世界"){
+  await show("ステキですねぇ！！");
+} else if (a=="あたなの知らない世界"){
+  await show("ぜひ、行ってみたいですよね☆");
+} else if (a=="どちらでもない"){
+  await show("怖い話ですねぇ・・・・");
+} 
+</script>
